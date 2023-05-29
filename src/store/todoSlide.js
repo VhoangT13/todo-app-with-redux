@@ -5,7 +5,7 @@ const todoSlice = createSlice({
   initialState: [],
   reducers: {
     addTodo(state, action) {
-      state.push(action.payload);
+      state.unshift(action.payload);
     },
     removeTodo(state, action) {
       const index = state.map((item) => item.id).indexOf(action.payload);
